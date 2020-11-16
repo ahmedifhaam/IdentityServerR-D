@@ -1,0 +1,11 @@
+﻿@model IdentityServerAspNetIdentity.Quickstart.Account.UserNameViewModel
+
+<form method="post">
+    <input type="hidden" asp-for="ReturnUrl" />
+    <fieldset>
+        <div>
+            @Html.TextBoxFor(model => model.Username, new { placeholder = "Username", id = "Username"})
+            <button id="NextButton" name="button" formaction="RedirectToPasswordView">Next</button>
+        </div>
+    </fieldset>
+</form>
